@@ -6,11 +6,15 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href="//fonts.googleapis.com/css?family=Kaushan+Script&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Abel&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     
     <body>
         <div class="page-header">
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
             <h1><a href="/">Meta 2: Criação da Rede Nacional de Captura de Movimentos</a></h1>
         </div>
         
@@ -19,6 +23,12 @@
                 <div class="col-md-8">
                     {% block content %}
                     {% endblock %}
+
+                    <div class="blend4web">
+                        <h1><a href="">Blend4Web</a></h1>
+                        <p>Teste</p>
+                        <iframe width="800" height="500" allowfullscreen src="cube.html"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
