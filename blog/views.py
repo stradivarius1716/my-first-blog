@@ -12,7 +12,7 @@ def post_detail(request, pk):
     return render(request, 'blog/post_detail.html', {'post': post})
 
 def my_cube(request):
-    return render(request, 'blog/cube.html')
+    return render(request, 'blog/talita.html')
 
 def post_new(request):
     if request.method == "POST":
